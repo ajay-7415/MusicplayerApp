@@ -190,10 +190,14 @@ useEffect(() => {
 
   return (
   <>
+    <div
+      className="background-blur"
+      style={{ backgroundImage: `url(${currentSong.thumbnail})` }}
+    ></div>
+    <div className="background-overlay" style={{ background: bgColor }}></div>
 
-    <div className="app" style={{ backgroundColor: bgColor }}>
-
-      <div className="container" >
+    <div className="app">
+      <div className="container">
         <aside className="sidebar">
           <h2>Spotify</h2>
           <nav>
@@ -317,6 +321,8 @@ useEffect(() => {
     </div>
   </>
 );
+
+  
 
 };
 
