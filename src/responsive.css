@@ -1,0 +1,84 @@
+/* responsive.css */
+
+/* Default styles are handled in index.css. Responsive overrides go here. */
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem 0;
+  }
+  .sidebar h2 {
+    display: none;
+  }
+  .sidebar nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .now-playing-side {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .now-playing-side .now-playing-art,
+  .now-playing-side .now-playing,
+  .now-playing-side .controls,
+  .now-playing-side .volume,
+  .now-playing-side .progress-bar {
+    margin: 0 0.5rem;
+  }
+  .now-playing-side h3,
+  .now-playing-side p {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .song-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .song {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .song img {
+    width: 100px;
+    height: 100px;
+  }
+  .song-info h3,
+  .song-info p {
+    font-size: 0.9rem;
+  }
+  .song-actions {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .now-playing-side {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar input {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+  .controls button,
+  .volume button {
+    font-size: 1.2rem;
+    padding: 0.4rem;
+  }
+  .progress-bar {
+    height: 6px;
+  }
+}
